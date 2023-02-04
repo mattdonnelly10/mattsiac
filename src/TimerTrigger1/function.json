@@ -1,0 +1,19 @@
+{
+  "disabled":false,
+  "bindings": [
+    {
+      "name": "Timer",
+      "type": "timerTrigger",
+      "direction": "in",
+      "schedule": "0 */5 * * * *"
+    },
+    {
+      "name": "outputBlob",
+      "path": "outcontainer/{rand-guid}.csv",
+      "connection": "AzureWebJobsStorage",
+      "direction": "out",
+      "type": "blob"
+    }
+  ],
+  "scriptFile": "./run.ps1"
+}
